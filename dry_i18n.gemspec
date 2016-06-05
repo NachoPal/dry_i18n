@@ -9,9 +9,11 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Nacho"]
   spec.email         = ["ignacio.palacios.santos@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Avoid repeating word translations for I18n ruby gem}
+  spec.description   = %q{Don't repeat yourself translating over and over common words you use for your project.
+                          Translate them once, and then you'll be able to reuse them directly on the I18n yml file}
+
+  spec.homepage      = "https://github.com/NachoPal/dry_i18n"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
