@@ -10,5 +10,5 @@ require "dry_i18n"
 # require "pry"
 # Pry.start
 
-require "irb"
-IRB.start
+require "pry"
+Pry.start

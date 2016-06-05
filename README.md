@@ -32,7 +32,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/dry_i18n.
+Bug reports and pull requests are welcome on GitHub at https://github.com/NachoPal/dry_i18n.
 
 
 ## License
