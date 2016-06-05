@@ -1,5 +1,6 @@
 require "dry_i18n/version"
 require "i18n"
+
 module DryI18n
     I18n::Backend::Base.module_eval do
       alias_method :original_translate, :translate
