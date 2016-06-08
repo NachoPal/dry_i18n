@@ -2,6 +2,7 @@ require "dry_i18n/version"
 require "i18n"
 
 module DryI18n
+=begin
   I18n::Backend::Base.module_eval do
     alias_method :original_translate, :translate
     def translate(locale, key, options = {})
@@ -13,7 +14,7 @@ module DryI18n
     def translate_nested(nested_words, result, locale)
       nested_words.each do |nested_word|
         key = nested_word[/@\[(.*?)\]/m, 1]
-        binding.pry
+        #binding.pry
         begin
           key_with_options = eval(key)
           main_key = key_with_options.keys.first
@@ -35,5 +36,34 @@ module DryI18n
       end
       result
     end
+  end
+=end
+
+  I18n::Backend::Base.module_eval do
+    alias_method :original_translate, :translate
+
+    def translate(locale, key, options = {})
+      translation = original_translate(locale, key, options)
+      variables = variables?(translation)
+
+      if variables
+        variables.each do |variable|
+          key = variable[/@\[(.*?)\]/m, 1]
+          #binding.pry
+          translation = translation.sub(variable, I18n.translate(key, options))
+        end
+      end
+      translation
+    end
+
+    private
+      def variables?(translation)
+        nested_words = translation.scan(/\@\[.*?\]/)
+        if !nested_words.any?
+          false
+        else
+          nested_words
+        end
+      end
   end
 end
