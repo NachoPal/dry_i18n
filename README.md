@@ -35,7 +35,7 @@ en:
     main_key: "I am a main key which reuse a @[secondary_key]"
 ```
 ```
-I18n.t("main_key") = "I am a main key which reuse a secondary_key"
+I18n.t("main_key") = "I am a main key which reuse a secondary key"
 ```
 
 2.- Reusing with interpolation
@@ -45,7 +45,7 @@ en:
     main_key: "I am a main key which reuse a @[secondary_key,{interpolation: 'interpolation'}]"
 ```
 ```
-I18n.t("main_key") = "I am a main key which reuse a secondary_key with interpolation"
+I18n.t("main_key") = "I am a main key which reuse a secondary key with interpolation"
 ```
 
 3.- Reusing with nested keys with or without interpolation
@@ -57,7 +57,7 @@ en:
 ```
 ```
 I18n.t("main_key",{interpolation: 'interpolation'}) =
-"I am a main key which reuse a secondary_key with interpolation and a nested key with interpolaton, and it's own interpolation"
+"I am a main key which reuse a secondary key with interpolation and a nested key with interpolation, and it's own interpolation"
 ```
 
 ## Contributing
