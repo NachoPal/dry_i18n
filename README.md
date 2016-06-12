@@ -22,7 +22,38 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+With this Gem you'll be able tu reuse i18n key translations, avoiding in this way to repeat yourself.
+
+#Some examples of use:
+
+1.- Basic reuse
+```
+en:
+    secondary_key: "secondary key"
+    main_key: "I am a main key which reuse a @[secondary_hey]"
+
+I18n.t("main_key") = "I am a main key which reuse a secondary_key"
+```
+
+2.- Reusing with interpolation
+```
+en:
+    secondary_key: "secondary key with %{interpolation}"
+    main_key: "I am a main key which reuse a @[secondary_hey,{interpolation: 'interpolation'}]"
+
+I18n.t("main_key") = "I am a main key which reuse a secondary_key with interpolation"
+```
+
+3.- Reusing with nested keys with or without interpolation
+```
+en:
+    nth_key: "nested key with %{interpolation}"
+    secondary_key: "secondary key with %{interpolation} and a @[nth_key,{interpolation: 'interpolation']"
+    main_key: "I am a main key which reuse a @[secondary_hey,{interpolation: 'interpolation'}], and it's own %{interpolation}"
+
+I18n.t("main_key",{interpolation: 'interpolation'}) =
+"I am a main key which reuse a secondary_key with interpolation and a nested key with interpolaton, and it's own interpolation"
+```
 
 ## Development
 
