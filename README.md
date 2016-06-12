@@ -24,14 +24,15 @@ Or install it yourself as:
 
 With this Gem you'll be able tu reuse i18n key translations, avoiding in this way to repeat yourself.
 
-#Some examples of use:
+###Some examples of use:
 
 1.- Basic reuse
 ```
 en:
     secondary_key: "secondary key"
     main_key: "I am a main key which reuse a @[secondary_hey]"
-
+```
+```
 I18n.t("main_key") = "I am a main key which reuse a secondary_key"
 ```
 
@@ -40,7 +41,8 @@ I18n.t("main_key") = "I am a main key which reuse a secondary_key"
 en:
     secondary_key: "secondary key with %{interpolation}"
     main_key: "I am a main key which reuse a @[secondary_hey,{interpolation: 'interpolation'}]"
-
+```
+```
 I18n.t("main_key") = "I am a main key which reuse a secondary_key with interpolation"
 ```
 
@@ -50,16 +52,11 @@ en:
     nth_key: "nested key with %{interpolation}"
     secondary_key: "secondary key with %{interpolation} and a @[nth_key,{interpolation: 'interpolation']"
     main_key: "I am a main key which reuse a @[secondary_hey,{interpolation: 'interpolation'}], and it's own %{interpolation}"
-
+```
+```
 I18n.t("main_key",{interpolation: 'interpolation'}) =
 "I am a main key which reuse a secondary_key with interpolation and a nested key with interpolaton, and it's own interpolation"
 ```
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
 ## Contributing
 
