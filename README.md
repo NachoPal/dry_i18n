@@ -26,7 +26,7 @@ If the key you are reusing has interpolations, you just need to add a coma and p
 
 You don't have to worry about the order you declare the keys on the yml files
 
-###Some examples of use:
+###Some examples of usage:
 
 1.- Basic reuse
 ```
