@@ -57,7 +57,7 @@ en:
 ```
 ```
 I18n.t("main_key",{interpolation: 'interpolation'}) =
-"I am a main key which reuse a secondary key with interpolation and a nested key with interpolation, and it's own interpolation"
+"I am a main key which reuse a secondary key with interpolation and a nested key with interpolation, and its own interpolation"
 ```
 
 ## Contributing
