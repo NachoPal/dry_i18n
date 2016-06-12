@@ -28,6 +28,8 @@ Basically you just need to wrap the key you want to reuse with the markup **@[ke
 
 If the key you are reusing has interpolations, you just need to add a coma and pass a hash with the interpolation values **@[key,{foo: 'foo', bar: 'bar'}]**
 
+You don't have to worry about the order you declare the keys on the yml files
+
 ###Some examples of use:
 
 1.- Basic reuse
