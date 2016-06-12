@@ -26,7 +26,7 @@ With this Gem you'll be able tu reuse i18n key translations, avoiding in this wa
 
 Basically you just need to wrap the key you want to reuse with the markup **@[key]**
 
-If the key you are reusing has interpolations, you just need to add a coma and pass a hash with the interpolation values **@[key,{foo: foo, bar: bar}]**
+If the key you are reusing has interpolations, you just need to add a coma and pass a hash with the interpolation values **@[key,{foo: 'foo', bar: 'bar'}]**
 
 ###Some examples of use:
 
