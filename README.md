@@ -34,7 +34,7 @@ If the key you are reusing has interpolations, you just need to add a coma and p
 ```
 en:
     secondary_key: "secondary key"
-    main_key: "I am a main key which reuse a @[secondary_hey]"
+    main_key: "I am a main key which reuse a @[secondary_key]"
 ```
 ```
 I18n.t("main_key") = "I am a main key which reuse a secondary_key"
