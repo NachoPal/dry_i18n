@@ -44,7 +44,7 @@ I18n.t("main_key") = "I am a main key which reuse a secondary_key"
 ```
 en:
     secondary_key: "secondary key with %{interpolation}"
-    main_key: "I am a main key which reuse a @[secondary_hey,{interpolation: 'interpolation'}]"
+    main_key: "I am a main key which reuse a @[secondary_key,{interpolation: 'interpolation'}]"
 ```
 ```
 I18n.t("main_key") = "I am a main key which reuse a secondary_key with interpolation"
@@ -55,7 +55,7 @@ I18n.t("main_key") = "I am a main key which reuse a secondary_key with interpola
 en:
     nth_key: "nested key with %{interpolation}"
     secondary_key: "secondary key with %{interpolation} and a @[nth_key,{interpolation: 'interpolation']"
-    main_key: "I am a main key which reuse a @[secondary_hey,{interpolation: 'interpolation'}], and it's own %{interpolation}"
+    main_key: "I am a main key which reuse a @[secondary_key,{interpolation: 'interpolation'}], and it's own %{interpolation}"
 ```
 ```
 I18n.t("main_key",{interpolation: 'interpolation'}) =
