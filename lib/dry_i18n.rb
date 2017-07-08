@@ -28,6 +28,7 @@ module DryI18n
     private
 
       def variables?(translation)
+        return false unless translation =~ /\@\[.*?\]/
         nested_words = translation.scan(/\@\[.*?\]/)
         if !nested_words.any?
           false
