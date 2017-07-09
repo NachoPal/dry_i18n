@@ -29,4 +29,8 @@ describe DryI18n do
   it 'reusing a key word with interpolation' do
     expect(I18n.t('main_and_reused_interp')).to eq('I reuse reused interpolation variable')
   end
+
+  it 'use method transliterate' do
+    expect(I18n.transliterate('ÃrÃ¸skÃ¸bing')).to be_a(String)
+  end
 end
